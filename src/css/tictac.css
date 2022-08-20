@@ -1,0 +1,19 @@
+.box {
+  background-color: rgb(32, 31, 31);
+  border-radius: 5px;
+  width: 75px;
+  height: 75px;
+  margin: 5px;
+}
+
+.parentBox {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 350px;
+  width: 25%;
+}
+h1 {
+  color: red;
+  text-align: center;
+}
