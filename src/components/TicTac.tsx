@@ -1,24 +1,20 @@
-import { stat } from "fs";
-import { useEffect, useState } from "react";
-import "/home/gibson/TicTacGame/tic-tac/src/css/tictac.css";
+import { useDispatch, useSelector } from "react-redux";
+import "/home/yavar/React/TicTacGame/src/css/tictac.css";
 
-const TicTac = () => {
-  const [firstPlayer, setFirstPlayer] = useState<any>("O");
-  const [seconPlayer, setSecondPlayer] = useState<any>("X");
-  let flag = false;
-  const [game, setGame] = useState(false);
+const TicTac = ({ click, on, index }: any) => {
+  const state = useSelector((state: any) => state.tictac);
 
-  const handleClick = () => {
-    flag = true;
-    setGame(!game);
-    console.log("Clicked", game);
-  };
-  // useEffect(() => {});
   return (
-    // <div>
-    <div className="box" onClick={() => handleClick()}>
-      <h1 className="h1">{game ? firstPlayer : flag ? seconPlayer : " "}</h1>
-      {/* </div> */}
+    <div className="box" onClick={click}>
+      <h1 className="h1">
+        {state.default
+          ? state.items[index].on
+            ? state.changePlayer
+              ? state.firstPlayer
+              : state.secondPlayer
+            : " "
+          : " "}
+      </h1>
     </div>
   );
 };

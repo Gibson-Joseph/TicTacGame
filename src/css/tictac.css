@@ -3,15 +3,16 @@
   border-radius: 5px;
   width: 75px;
   height: 75px;
-  margin: 5px;
+  /* margin: 2px; */
 }
 
 .parentBox {
   margin: auto;
+  margin-top: 40px;
   display: grid;
   grid-template-columns: auto auto auto;
-  height: 350px;
-  width: 25%;
+  height: 250px;
+  width: 19%;
 }
 h1 {
   color: red;
